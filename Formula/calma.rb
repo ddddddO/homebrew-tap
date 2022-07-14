@@ -5,21 +5,21 @@
 class Calma < Formula
   desc "♻Calendar for Markdown♻ ...only for Japan!🎌"
   homepage "https://github.com/ddddddO/calma"
-  version "1.1.1"
+  version "1.2.3"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/calma/releases/download/v1.1.1/calma_darwin_x86_64.tar.gz"
-      sha256 "d9688da0a3b9befa231cd5df5cc2acb645fdee808c371b9d5dc15009404f8a62"
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.3/calma_darwin_x86_64.tar.gz"
+      sha256 "84a140b2136ebd059cc81ca2729b92847441f2344b3d0596f4b7fe8f59890185"
 
       def install
         bin.install "calma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/calma/releases/download/v1.1.1/calma_darwin_arm64.tar.gz"
-      sha256 "cab284370daa5bcd1e28c4a66bdd063bbec5fcccb14defac5751e64005171d70"
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.3/calma_darwin_arm64.tar.gz"
+      sha256 "4df470a22978673afca226be45d04ea1ca1a60d6d9869f83c4301b2c9ab09a9f"
 
       def install
         bin.install "calma"
@@ -29,16 +29,16 @@ class Calma < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/calma/releases/download/v1.1.1/calma_linux_arm64.tar.gz"
-      sha256 "4901dfd97d6ab510f0972c4ea9d61a9db806bea7f5db73e7586aed60ba1620fb"
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.3/calma_linux_arm64.tar.gz"
+      sha256 "11411da6dfa25154d10ff3d1b4e8c9bb13e741c6749de21a829b3a12f19fd8f3"
 
       def install
         bin.install "calma"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/calma/releases/download/v1.1.1/calma_linux_x86_64.tar.gz"
-      sha256 "f03434ebf819c1b77f09ab12e501f9d082d68d666ed9f2cac311c94b6d67c217"
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.3/calma_linux_x86_64.tar.gz"
+      sha256 "08238010d9087087b4810277992614ee3a0311e9a67a9b0556d8f0eeaa5c0958"
 
       def install
         bin.install "calma"
