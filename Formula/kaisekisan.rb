@@ -5,21 +5,21 @@
 class Kaisekisan < Formula
   desc "Kaisekisan"
   homepage "https://github.com/ddddddO/kaisekisan"
-  version "0.1.0"
+  version "0.1.1"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.0/kaisekisan_darwin_x86_64.tar.gz"
-      sha256 "a338c9e9bda12bec72476cf24a7b33508ba5e2ccdcd139cd891df3aef2daaee3"
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.1/kaisekisan_darwin_x86_64.tar.gz"
+      sha256 "d8b88e4ec038e9201ee48dcb8b3dc65e25a6e56d3e89e8103c7d0f16dc5c3c08"
 
       def install
         bin.install "kaisekisan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.0/kaisekisan_darwin_arm64.tar.gz"
-      sha256 "3a752beb8716896678b19ff4eed5226eeb06d38b46b8ef06ba385f56cd8c7f9f"
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.1/kaisekisan_darwin_arm64.tar.gz"
+      sha256 "a94d947e32272ea7c5c20203a3830a5b1f84896752877d643f3a8b899cadd950"
 
       def install
         bin.install "kaisekisan"
@@ -28,17 +28,17 @@ class Kaisekisan < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.0/kaisekisan_linux_x86_64.tar.gz"
-      sha256 "1937efbef878eab9f1ba0746698f29688ec62210a4b9990eab49c092af57c91e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.1/kaisekisan_linux_arm64.tar.gz"
+      sha256 "dc21dd7459d418da1d0e5670f1a02d950a83d31f0da9e36bc463242529fb9421"
 
       def install
         bin.install "kaisekisan"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.0/kaisekisan_linux_arm64.tar.gz"
-      sha256 "64f9e135261cc5564beb7f8e14b5a3ab1351b83588bc12a03402a9b917a8f943"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.1/kaisekisan_linux_x86_64.tar.gz"
+      sha256 "483ac509e8ac2360532e4159660a005dde9d1916f1691469df624de949cc73ab"
 
       def install
         bin.install "kaisekisan"
