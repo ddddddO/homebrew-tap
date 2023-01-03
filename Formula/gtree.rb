@@ -5,21 +5,21 @@
 class Gtree < Formula
   desc "Output tree🌳 or Make directories(files)📁 from Markdown."
   homepage "https://github.com/ddddddO/gtree"
-  version "1.7.25"
+  version "1.7.26"
   license "BSD-2-Clause"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.7.25/gtree_darwin_arm64.tar.gz"
-      sha256 "2d8de676e2c770581a7d7d66112cd6dbf4776774fb40571d881eaea820373cde"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddddddO/gtree/releases/download/v1.7.26/gtree_darwin_x86_64.tar.gz"
+      sha256 "9d3d499fdf814ac3f7c615cc8a7f8530ad599f597f11b6161d3393bd27999bf4"
 
       def install
         bin.install "gtree"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.7.25/gtree_darwin_x86_64.tar.gz"
-      sha256 "cb6e11d33f381625e162723daebc27fb209f5c55dcb0733576ac6122f9179b95"
+    if Hardware::CPU.arm?
+      url "https://github.com/ddddddO/gtree/releases/download/v1.7.26/gtree_darwin_arm64.tar.gz"
+      sha256 "58629b34120d9d4bb96d7a28ffd5805eb0f6e62585a8ce02782e647afa4f613d"
 
       def install
         bin.install "gtree"
@@ -29,16 +29,16 @@ class Gtree < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.7.25/gtree_linux_x86_64.tar.gz"
-      sha256 "42318cfbb53ecafd27a171b36d954786f97fe7c1344d16be3b2770b2cc1aefc9"
+      url "https://github.com/ddddddO/gtree/releases/download/v1.7.26/gtree_linux_x86_64.tar.gz"
+      sha256 "092d9907a93b355c0354e9d9a25280bab06560f4c9287a6fe88f53f7f9c7a117"
 
       def install
         bin.install "gtree"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.7.25/gtree_linux_arm64.tar.gz"
-      sha256 "711f7c248f012c702e82fe500d63d47da3269f58328c9484092ebcad6e7eff03"
+      url "https://github.com/ddddddO/gtree/releases/download/v1.7.26/gtree_linux_arm64.tar.gz"
+      sha256 "34f351d5708f1afdd18b6bf11e258095a5609a8ed23a2d7d2d5f6e3b1e824a7e"
 
       def install
         bin.install "gtree"
