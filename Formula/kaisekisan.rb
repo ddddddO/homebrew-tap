@@ -5,21 +5,21 @@
 class Kaisekisan < Formula
   desc "Kaisekisan"
   homepage "https://github.com/ddddddO/kaisekisan"
-  version "0.1.4"
+  version "0.1.5"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.4/kaisekisan_darwin_x86_64.tar.gz"
-      sha256 "fabd3866ca2e53fc0188d0db4917e4b855144174e7837ac81e0f2c5250a01f20"
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.5/kaisekisan_darwin_x86_64.tar.gz"
+      sha256 "c09b71a426fd48c6f4a7e15b12ff1f3b25148618f44a0b86c04563fd3b60ed00"
 
       def install
         bin.install "kaisekisan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.4/kaisekisan_darwin_arm64.tar.gz"
-      sha256 "75ad2c1d39e24b8bbdfb4387825743c7a1686c76d21dc1d160ba26d4ad411977"
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.5/kaisekisan_darwin_arm64.tar.gz"
+      sha256 "0917e112e353b1df450821791987ebfeb636279a12f69dfdc874219dd9cc06d5"
 
       def install
         bin.install "kaisekisan"
@@ -29,16 +29,16 @@ class Kaisekisan < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.4/kaisekisan_linux_x86_64.tar.gz"
-      sha256 "824671160750df8efe3200d3e7b9c31c7c06cd61c194766eba296cd309b51acd"
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.5/kaisekisan_linux_x86_64.tar.gz"
+      sha256 "b18a06eec45e34a10576858d4c4cb8efc4b244a95c6fec047a371593fe7cb453"
 
       def install
         bin.install "kaisekisan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.4/kaisekisan_linux_arm64.tar.gz"
-      sha256 "a42520fd7ba0076d9f532698e76a8284d39bb8cfe6058da1c17354f024f335c3"
+      url "https://github.com/ddddddO/kaisekisan/releases/download/v0.1.5/kaisekisan_linux_arm64.tar.gz"
+      sha256 "c5d742599cd733705588329babba81656f5e792dbe622a2296aa31543f843aa0"
 
       def install
         bin.install "kaisekisan"
