@@ -9,17 +9,17 @@ class Calma < Formula
   license "BSD-2-Clause"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.14/calma_darwin_arm64.tar.gz"
-      sha256 "f43e110361c013d18406ebb9bf0a625a2a1a5c925fac4c7482e44467a37593af"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.14/calma_darwin_amd64.tar.gz"
+      sha256 "605adb2874410bb3c58bb1f210120e828fbfa1f04227831ecafb3bdd4a8ab529"
 
       def install
         bin.install "calma"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.14/calma_darwin_amd64.tar.gz"
-      sha256 "e30207c300e00346b6e1e7cd5bbceb0779eb87994e07eccf3b930810551946be"
+    if Hardware::CPU.arm?
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.14/calma_darwin_arm64.tar.gz"
+      sha256 "0660d3d90a6efe380f17dab78950345de3a8084d9223d070d8844e53fe556d6c"
 
       def install
         bin.install "calma"
@@ -30,7 +30,7 @@ class Calma < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/ddddddO/calma/releases/download/v1.2.14/calma_linux_amd64.tar.gz"
-      sha256 "5f8626d3b7cb174aef6f2d88341bc99fc511fdd1b30cf17bc4ae5407bf88a178"
+      sha256 "f6a57d9a0e8364dc6a63b1790783b840b19317f4d0a425a65b32a80bbce79f4b"
 
       def install
         bin.install "calma"
@@ -38,7 +38,7 @@ class Calma < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ddddddO/calma/releases/download/v1.2.14/calma_linux_arm64.tar.gz"
-      sha256 "338b4f698a094176a675c61a8210990fdbfc982a9b16f39a91faaa44de81100f"
+      sha256 "0db246fc2ed90f42319eaa449b83d82e7ffd5e8c46931b786766fd2ad8944ecd"
 
       def install
         bin.install "calma"
