@@ -5,21 +5,21 @@
 class Calma < Formula
   desc "♻Calendar for Markdown♻ ...only for Japan!🎌"
   homepage "https://github.com/ddddddO/calma"
-  version "1.2.15"
+  version "1.2.16"
   license "BSD-2-Clause"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.15/calma_darwin_arm64.tar.gz"
-      sha256 "f56a1819b703edaf20c187b5fb8f7ccc6b7ec74dff5db0af3f6029f1c71379cb"
+    on_intel do
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.16/calma_darwin_amd64.tar.gz"
+      sha256 "b10effb7e94d766f22b9a174e35b832c5b81503861e31a87e95946966b94cdc2"
 
       def install
         bin.install "calma"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.15/calma_darwin_amd64.tar.gz"
-      sha256 "c661b58d20886e391cc5ef7c52f234390b6197b0dfcf7646af5ab194409f6358"
+    on_arm do
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.16/calma_darwin_arm64.tar.gz"
+      sha256 "b6a3cfe31179d3038547d547cdd231fab7f3562bbe8b55185f212b08d4936d6d"
 
       def install
         bin.install "calma"
@@ -28,20 +28,24 @@ class Calma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.15/calma_linux_arm64.tar.gz"
-      sha256 "534c8215b8711a06b001e852e2d6889b99e3dfa5e016e3705d4f2bd913b462b4"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ddddddO/calma/releases/download/v1.2.16/calma_linux_amd64.tar.gz"
+        sha256 "7891480ca184626e89c1873af11692e65e9b8656a687b0f658f24c42148be225"
 
-      def install
-        bin.install "calma"
+        def install
+          bin.install "calma"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.15/calma_linux_amd64.tar.gz"
-      sha256 "f8606343b055db6ad84c518bdc86db948103bfbdbc83299cb988b1646a06ed3e"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ddddddO/calma/releases/download/v1.2.16/calma_linux_arm64.tar.gz"
+        sha256 "a3a7c589c8298ad4d121d0290490bdb2e5c24f33da80f197d58898121d7bd012"
 
-      def install
-        bin.install "calma"
+        def install
+          bin.install "calma"
+        end
       end
     end
   end
