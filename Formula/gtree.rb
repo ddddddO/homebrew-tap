@@ -5,21 +5,21 @@
 class Gtree < Formula
   desc "This CLI uses Markdown to generate directory trees and directories itself, and also verifies directories."
   homepage "https://github.com/ddddddO/gtree"
-  version "1.10.13"
+  version "1.10.14"
   license "BSD-2-Clause"
 
   on_macos do
-    on_intel do
-      url "https://github.com/ddddddO/gtree/releases/download/v1.10.13/gtree_Darwin_x86_64.tar.gz"
-      sha256 "0a67f72b4e03a92dd432ec47fc6a77ec4127c4c9fbd3b8575f84a1386533819c"
+    if Hardware::CPU.intel?
+      url "https://github.com/ddddddO/gtree/releases/download/v1.10.14/gtree_Darwin_x86_64.tar.gz"
+      sha256 "ab282155aeff26c200d6f39b93230b207af2ee101d7b583f57dbb0e5f4c03741"
 
       def install
         bin.install "gtree"
       end
     end
-    on_arm do
-      url "https://github.com/ddddddO/gtree/releases/download/v1.10.13/gtree_Darwin_arm64.tar.gz"
-      sha256 "b6531d5b1261b81f4d2468276598ca313f1976f2b50e0e6e562c388ef2e84add"
+    if Hardware::CPU.arm?
+      url "https://github.com/ddddddO/gtree/releases/download/v1.10.14/gtree_Darwin_arm64.tar.gz"
+      sha256 "8860fa2e21d35fbb6be7efbd878f3a111639db5907f24c196e5a731e91c2fdcc"
 
       def install
         bin.install "gtree"
@@ -28,20 +28,20 @@ class Gtree < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ddddddO/gtree/releases/download/v1.10.13/gtree_Linux_x86_64.tar.gz"
-        sha256 "9dfa01c177a134ec4add088662a371734b95a1510aedfce487d4fb2f76faf3bc"
+        url "https://github.com/ddddddO/gtree/releases/download/v1.10.14/gtree_Linux_x86_64.tar.gz"
+        sha256 "82d70a11c63d5f2a559576096598421354edc49e4b40e669c9c3d49111cf6255"
 
         def install
           bin.install "gtree"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ddddddO/gtree/releases/download/v1.10.13/gtree_Linux_arm64.tar.gz"
-        sha256 "b2196f07c5e2e4c1b1250466f3d2ef15afd102257964e2a12301306eafc976e3"
+        url "https://github.com/ddddddO/gtree/releases/download/v1.10.14/gtree_Linux_arm64.tar.gz"
+        sha256 "e04d17fd84ff2262343b0952ebcb716e39ea3a54c9ae56f0f5775b893db518da"
 
         def install
           bin.install "gtree"
