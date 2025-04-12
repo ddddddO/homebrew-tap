@@ -5,21 +5,21 @@
 class Calma < Formula
   desc "♻Calendar for Markdown♻ ...only for Japan!🎌"
   homepage "https://github.com/ddddddO/calma"
-  version "1.2.20"
+  version "1.2.21"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.20/calma_darwin_amd64.tar.gz"
-      sha256 "aeb7b6705e84098e1719f0496ab7ab24a0ab03e9bb285657cadcccebd869b761"
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.21/calma_darwin_amd64.tar.gz"
+      sha256 "d153394ab07d70ad3695da68ebff40d5741f3a0388960b7642761a38fb0027cc"
 
       def install
         bin.install "calma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/calma/releases/download/v1.2.20/calma_darwin_arm64.tar.gz"
-      sha256 "7df76dcac4e5e16800dd4da911cbf73dd89ce6b6e5716ceefe89aae6649a55b4"
+      url "https://github.com/ddddddO/calma/releases/download/v1.2.21/calma_darwin_arm64.tar.gz"
+      sha256 "2ac1267a29b4d94241697970b2d5f21a919d5bcc50014a8d922dddb0882838ff"
 
       def install
         bin.install "calma"
@@ -30,8 +30,8 @@ class Calma < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ddddddO/calma/releases/download/v1.2.20/calma_linux_amd64.tar.gz"
-        sha256 "e3cb65acb60d92c757f3e35d82f92189f78de2e30111872790bc4947bfd4b952"
+        url "https://github.com/ddddddO/calma/releases/download/v1.2.21/calma_linux_amd64.tar.gz"
+        sha256 "df2a7f9d0474a0b86ddd2d7d0708ddfb5679a1430c568c855688b4dd8db7a681"
 
         def install
           bin.install "calma"
@@ -40,8 +40,8 @@ class Calma < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ddddddO/calma/releases/download/v1.2.20/calma_linux_arm64.tar.gz"
-        sha256 "8aca697ac16b504979b6f7c999eba022a40029a6e74dc17245123e8cafc5f5ba"
+        url "https://github.com/ddddddO/calma/releases/download/v1.2.21/calma_linux_arm64.tar.gz"
+        sha256 "894340e3c9f9c6a4329266d8eb4710173167027053557017fc4a03867fe5a2fe"
 
         def install
           bin.install "calma"
