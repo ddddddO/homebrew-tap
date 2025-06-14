@@ -5,21 +5,21 @@
 class Ps2 < Formula
   desc "🎮 phP Serialize() To xxxx (e.g. JSON)"
   homepage "https://github.com/ddddddO/ps2"
-  version "1.0.9"
+  version "1.0.10"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.0.9/ps2_darwin_amd64.tar.gz"
-      sha256 "16ce21e1246beaa6b8c2fcc432ef7a47306dce017725da95cc8e1ad1f5245168"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.0.10/ps2_darwin_amd64.tar.gz"
+      sha256 "cc035e05bcfddafdfca72f726b5bb08b445d1fe9e666608658ad785679e2797d"
 
       def install
         bin.install "ps2"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.0.9/ps2_darwin_arm64.tar.gz"
-      sha256 "5e49c22c9116262c47e71e65d349426b9b9a4da6a28059a610f1aa9eddccd2b2"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.0.10/ps2_darwin_arm64.tar.gz"
+      sha256 "d1ce3932b859c5c4797ebf51447559470b3ea91317fb6e0aa54485eb38548952"
 
       def install
         bin.install "ps2"
@@ -29,15 +29,15 @@ class Ps2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.0.9/ps2_linux_amd64.tar.gz"
-      sha256 "4f52e04cab232b2f3995e44416f072148474f314aaf8a224f4e3882a051ea412"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.0.10/ps2_linux_amd64.tar.gz"
+      sha256 "21a299591f705774c4d87e5f27a6330f96ac7cac7cd5cb192612d7b392566e70"
       def install
         bin.install "ps2"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.0.9/ps2_linux_arm64.tar.gz"
-      sha256 "4b52c0a8f6e83c52bda7ec0b21f19af791ca84413c721076553ee12ed373f100"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.0.10/ps2_linux_arm64.tar.gz"
+      sha256 "fc35bd3e2e1c8e6b6bcaa7a8e9a1de922e17330381946b94c495ac480d37289c"
       def install
         bin.install "ps2"
       end
