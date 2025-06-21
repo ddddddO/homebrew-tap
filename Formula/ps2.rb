@@ -5,21 +5,21 @@
 class Ps2 < Formula
   desc "🎮 phP Serialize() To xxxx (e.g. JSON)"
   homepage "https://github.com/ddddddO/ps2"
-  version "1.2.0"
+  version "1.2.1"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.0/ps2_darwin_amd64.tar.gz"
-      sha256 "d91e53fa01f770848d2353452148863908852edb9b6ea8fdf8ef06951d6ed6a8"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_darwin_amd64.tar.gz"
+      sha256 "38615d695c0aad51aa1f63be70fe3424f8b52d7a9a447ab470295040552aef92"
 
       def install
         bin.install "ps2"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.0/ps2_darwin_arm64.tar.gz"
-      sha256 "b84a45cb3c8c4b1aa4f0b238a0cb29904e3b62bbeed4a5b6d0c89d8825d19f51"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_darwin_arm64.tar.gz"
+      sha256 "0c79f2a20ffb16297f1e8934f1676cee6cab64af1ae1e7764d594fe7a25fe53f"
 
       def install
         bin.install "ps2"
@@ -29,15 +29,15 @@ class Ps2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.0/ps2_linux_amd64.tar.gz"
-      sha256 "ea17ab6bfbd07bc6fd5a24dec6b00e0287e5e9c0210d7e109b495804ef86c9ef"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_linux_amd64.tar.gz"
+      sha256 "1138804105fc9c667006023ef16b0ebeb306183e958e616922554c220dcb3751"
       def install
         bin.install "ps2"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.0/ps2_linux_arm64.tar.gz"
-      sha256 "da1a4bb5a5683289c13e0d214158d0184fcb98ccff26c9d8fa342b4b8c7101ed"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_linux_arm64.tar.gz"
+      sha256 "4e08e8a7318de0e96bf3cf80308552b0d5949251e11c8a7b412fd3b785d7efea"
       def install
         bin.install "ps2"
       end
