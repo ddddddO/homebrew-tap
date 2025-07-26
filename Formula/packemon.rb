@@ -5,21 +5,21 @@
 class Packemon < Formula
   desc "Packet monster, or Packémon for short! (っ‘-’)╮=͟͟͞͞◒ ヽ( '-'ヽ). TUI tool for sending packets of arbitrary input and monitoring packets on any network interfaces (default: eth0)."
   homepage "https://github.com/ddddddO/packemon"
-  version "1.8.0"
+  version "1.8.1"
   license "BSD-2-Clause"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/ddddddO/packemon/releases/download/v1.8.0/packemon_Darwin_x86_64.tar.gz"
-    sha256 "bcf4e920a8a40d3ad3984db1ab7a36efe2e85ffd06a9aced227f96d004d08ab6"
+    url "https://github.com/ddddddO/packemon/releases/download/v1.8.1/packemon_Darwin_x86_64.tar.gz"
+    sha256 "9073262d8fc95d161442efd604118c8e638b2d11233180a21120f1773df44949"
 
     def install
       bin.install "packemon"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/ddddddO/packemon/releases/download/v1.8.0/packemon_Darwin_arm64.tar.gz"
-    sha256 "06d04248293197790769be4680f29701e759e65d566cc963f190c18633f4ef21"
+    url "https://github.com/ddddddO/packemon/releases/download/v1.8.1/packemon_Darwin_arm64.tar.gz"
+    sha256 "73e3ccbd2f6b6d121f8d5046d279973bbe11cd62534c9ed6e53ba041b6c5bf8e"
 
     def install
       bin.install "packemon"
