@@ -5,21 +5,21 @@
 class Ppaid < Formula
   desc "Tool that aids PHPUnit and PCOV"
   homepage "https://github.com/ddddddO/ppaid"
-  version "1.0.1"
+  version "1.1.0"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/ppaid/releases/download/v1.0.1/ppaid_darwin_amd64.tar.gz"
-      sha256 "5e0a6d7e18760fb03e6e3ef99e5c48b7ca7795ae677fb7809b9c6a0b1d724d7f"
+      url "https://github.com/ddddddO/ppaid/releases/download/v1.1.0/ppaid_darwin_amd64.tar.gz"
+      sha256 "2b5c33062870ba45927f669669d259496cf165920eef4777c5fa66781ef4640c"
 
       def install
         bin.install "ppaid"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/ppaid/releases/download/v1.0.1/ppaid_darwin_arm64.tar.gz"
-      sha256 "a56c32a27e57e3a682ce35e8687ab56e802224ab4316af2041def6f1ec788c10"
+      url "https://github.com/ddddddO/ppaid/releases/download/v1.1.0/ppaid_darwin_arm64.tar.gz"
+      sha256 "19c8211a5f27029405e21a27490330200ac2fa0664c6f8e2ab1b66043804918e"
 
       def install
         bin.install "ppaid"
@@ -29,15 +29,15 @@ class Ppaid < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ppaid/releases/download/v1.0.1/ppaid_linux_amd64.tar.gz"
-      sha256 "41b545e2cf3d1c441dd7a5e90b37a9e18c0968c31e61cdede1444330e619996c"
+      url "https://github.com/ddddddO/ppaid/releases/download/v1.1.0/ppaid_linux_amd64.tar.gz"
+      sha256 "78e7c25dd04a0984a456f8f27b6c824c408550d022a48a8a9b1d6d13f70c75ea"
       def install
         bin.install "ppaid"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ppaid/releases/download/v1.0.1/ppaid_linux_arm64.tar.gz"
-      sha256 "d79447d2652586f33d60f1c5471e841b60afa77eb143e83c204a10ebb7e9d32d"
+      url "https://github.com/ddddddO/ppaid/releases/download/v1.1.0/ppaid_linux_arm64.tar.gz"
+      sha256 "7436c9f1fc2a75cb74fcbf0fd76ef82efd01cb166f528d949bd1d7d8e9077e49"
       def install
         bin.install "ppaid"
       end
