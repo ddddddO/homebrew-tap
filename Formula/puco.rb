@@ -5,21 +5,21 @@
 class Puco < Formula
   desc "Tool that aids PHPUnit and PCOV"
   homepage "https://github.com/ddddddO/puco"
-  version "1.1.3"
+  version "1.1.4"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/puco/releases/download/v1.1.3/puco_darwin_amd64.tar.gz"
-      sha256 "8d0c8356d094ae8547c4ac52d6b8999e29cc1b3c9ed91a44c6c010b2d8c29932"
+      url "https://github.com/ddddddO/puco/releases/download/v1.1.4/puco_darwin_amd64.tar.gz"
+      sha256 "80fbdffe71a2e35c318e986dc1a3fda507ca9f50c75475eddfb398b291298659"
 
       def install
         bin.install "puco"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/puco/releases/download/v1.1.3/puco_darwin_arm64.tar.gz"
-      sha256 "9eac51437bbdf743aa5293c7b8903a974c93b229225d0327200937cbcf3ff840"
+      url "https://github.com/ddddddO/puco/releases/download/v1.1.4/puco_darwin_arm64.tar.gz"
+      sha256 "7442a7c2c89ecab1078f552cfab5563ac6e5a70a05c6beb7ff377be7f508bf57"
 
       def install
         bin.install "puco"
@@ -29,15 +29,15 @@ class Puco < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/puco/releases/download/v1.1.3/puco_linux_amd64.tar.gz"
-      sha256 "6da843c817c63e540a21414a67f99616175e2978f0391bc247b9a7ca687d921e"
+      url "https://github.com/ddddddO/puco/releases/download/v1.1.4/puco_linux_amd64.tar.gz"
+      sha256 "70ab4b16d35c951c54bab7527ee147c478abe1a8178f0889b1e6fa0480a583ac"
       def install
         bin.install "puco"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/puco/releases/download/v1.1.3/puco_linux_arm64.tar.gz"
-      sha256 "5c80e9ab1e11c710de474484b25ee476fa7594e39e57315e31b6e60c2556a072"
+      url "https://github.com/ddddddO/puco/releases/download/v1.1.4/puco_linux_arm64.tar.gz"
+      sha256 "bb17ab4a943ab4d74f448f4ade7b0a7ca9911ff11788fec10068d9c571a51848"
       def install
         bin.install "puco"
       end
