@@ -5,21 +5,21 @@
 class Ps2 < Formula
   desc "🎮 phP Serialize() To xxxx (e.g. JSON)"
   homepage "https://github.com/ddddddO/ps2"
-  version "1.2.1"
+  version "1.2.2"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_darwin_amd64.tar.gz"
-      sha256 "38615d695c0aad51aa1f63be70fe3424f8b52d7a9a447ab470295040552aef92"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.2/ps2_darwin_amd64.tar.gz"
+      sha256 "cb29ef9edb39a82cfe08365157478276a7865bddd90770096fdd050815769acf"
 
       def install
         bin.install "ps2"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_darwin_arm64.tar.gz"
-      sha256 "0c79f2a20ffb16297f1e8934f1676cee6cab64af1ae1e7764d594fe7a25fe53f"
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.2/ps2_darwin_arm64.tar.gz"
+      sha256 "7c1ca8de125d0ea315de20695a0f0cb43cb30300f8c308b780d05e3e7df76650"
 
       def install
         bin.install "ps2"
@@ -28,16 +28,16 @@ class Ps2 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_linux_amd64.tar.gz"
-      sha256 "1138804105fc9c667006023ef16b0ebeb306183e958e616922554c220dcb3751"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.2/ps2_linux_amd64.tar.gz"
+      sha256 "831f457716d7d11676b0726e8e7b05190efd8856fdb2e46cf18462ca4ca34373"
       def install
         bin.install "ps2"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/ps2/releases/download/v1.2.1/ps2_linux_arm64.tar.gz"
-      sha256 "4e08e8a7318de0e96bf3cf80308552b0d5949251e11c8a7b412fd3b785d7efea"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ddddddO/ps2/releases/download/v1.2.2/ps2_linux_arm64.tar.gz"
+      sha256 "5e70b31309a52cfc3d9f0a014d1108c1d68b14fe2f403e9dd736d12b2de48f62"
       def install
         bin.install "ps2"
       end
