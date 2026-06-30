@@ -5,21 +5,21 @@
 class Gtree < Formula
   desc "This CLI uses Markdown to generate directory trees and directories itself, and also verifies directories."
   homepage "https://github.com/ddddddO/gtree"
-  version "1.14.5"
+  version "1.14.6"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.14.5/gtree_Darwin_x86_64.tar.gz"
-      sha256 "bf598185cddfa7947e48de9da0587ce8450830116740350584e55208648c7ab2"
+      url "https://github.com/ddddddO/gtree/releases/download/v1.14.6/gtree_Darwin_x86_64.tar.gz"
+      sha256 "7585924de3782520ea2d8da3ed0b407904ffc547793bde6594ee040defac4e16"
 
       define_method(:install) do
         bin.install "gtree"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.14.5/gtree_Darwin_arm64.tar.gz"
-      sha256 "fa784657e0e3c80394c1333759eb92cc00ab525c899c1751b37c599c611c0128"
+      url "https://github.com/ddddddO/gtree/releases/download/v1.14.6/gtree_Darwin_arm64.tar.gz"
+      sha256 "4d60d7902232a115d8c9d7d14c524c9384305e7652d56ba9ab85965f6d43ee70"
 
       define_method(:install) do
         bin.install "gtree"
@@ -29,15 +29,15 @@ class Gtree < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.14.5/gtree_Linux_x86_64.tar.gz"
-      sha256 "e5de3ed9a020c685c761c0dd2f3fc9fb2ef04a6df15fa0d1c6191d118cb08e09"
+      url "https://github.com/ddddddO/gtree/releases/download/v1.14.6/gtree_Linux_x86_64.tar.gz"
+      sha256 "5206cc70a71fd6034e2c3e0055eddbd58208d70848f19b769deae352cd7cf582"
       define_method(:install) do
         bin.install "gtree"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ddddddO/gtree/releases/download/v1.14.5/gtree_Linux_arm64.tar.gz"
-      sha256 "85e82a484183481ae74467b1295bdf181fa158030f0cc973615d0ddcc51c94ef"
+      url "https://github.com/ddddddO/gtree/releases/download/v1.14.6/gtree_Linux_arm64.tar.gz"
+      sha256 "96905e7503d1549dccfc6e1b69d032633b0631296504666eb9cc1daf5c598f99"
       define_method(:install) do
         bin.install "gtree"
       end
